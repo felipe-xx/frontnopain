@@ -24,8 +24,10 @@ export class CitiesComponent implements OnInit {
         });
     }
 
-    CreateCities(name:String){
-        this._CitiesServ.CreateCities(name);
+    CreateCities(){
+        console.log('name', this.citiForm.value)
+        this._CitiesServ.CreateCities(this.citiForm.value)
+            
     }
 
 }

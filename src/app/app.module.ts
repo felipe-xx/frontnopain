@@ -9,6 +9,7 @@ import { PlacesComponent } from './places/places.component';
 import { UsersComponent } from './users/users.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { CitiesServiceService } from './cities-service.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [HttpClientModule],
+  providers: [CitiesServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
