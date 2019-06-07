@@ -25,8 +25,8 @@ export class CitiesComponent implements OnInit {
     }
 
     CreateCities(){
-        console.log('name', this.citiForm.value)
-        this._CitiesServ.CreateCities(this.citiForm.value)
+        console.log('name', this.citiForm.value);
+        this._CitiesServ.CreateCities(this.citiForm.value);
             
     }
 

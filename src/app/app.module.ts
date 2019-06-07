@@ -7,16 +7,20 @@ import { AppComponent } from './app.component';
 import { CitiesComponent } from './cities/cities.component';
 import { PlacesComponent } from './places/places.component';
 import { UsersComponent } from './users/users.component';
+import { LoginComponent } from './login/login.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { CitiesServiceService } from './cities-service.service';
+import { LoginServiceService } from './login-service.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CitiesComponent,
     PlacesComponent,
-    UsersComponent
+    UsersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,7 @@ import { CitiesServiceService } from './cities-service.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [CitiesServiceService],
+  providers: [CitiesServiceService, LoginServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
